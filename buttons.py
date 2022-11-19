@@ -6,11 +6,11 @@ from tkinter import *
 
 root = Tk()#it must be first line of your project
 
-myButton = Button(root,text="Click Me!")
-myButton1 = Button(root,text="Click Me!",state="disabled")
-myButton2 = Button(root,text="Click Me!",padx=50,pady=50)
-myButton.pack()
-myButton1.pack()
+def myClick():
+    myLabel = Label(root,text="Look!I clicked a Button!")
+    myLabel.pack()
+
+myButton2 = Button(root,text="Click Me!",command=myClick,fg="blue",bg="red")#function call not () parenthesis
 myButton2.pack()
 root.mainloop()
 
